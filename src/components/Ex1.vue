@@ -4,8 +4,8 @@
     // Add code here
     // challenge: use array  
     // ref with array of fruits and use v-for to display them in the template
-    const fruits = ref(['apple', 'banana', 'orange'])
-    const message = ref('I completed Ex1')
+    const fruits = ref(['apple', 'orange', 'peach'])
+    const message = ref('Choose your favorite fruit:')
 </script>
 
 <template>
