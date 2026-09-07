@@ -50,7 +50,7 @@
     <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
                 because '-' is a minus operator for (Vue) JavaScript  -->
     <div id="part1">
-        <div v-bind:id="id" class="m-2" v-bind:class="{'blueBox' : blueBox, 'redBox' : !blueBox}">">
+        <div v-bind:id="id" class="m-2" v-bind:class="{'blueBox' : blueBox, 'redBox' : !blueBox}">
             div ID : {{id}} 
         </div>
         
@@ -65,7 +65,7 @@
         </div>
        
         <button type="button" 
-        v-bind:class="{'btn' : true , 'btn-primary' : redBtn, 'btn-danger' : !redBtn}" 
+        v-bind:class="{'btn' : true , 'btn-primary' : !redBtn, 'btn-danger' : redBtn}" 
         @click="changeTextColor">Change Text Color</button> 
     </div>
 
