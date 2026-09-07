@@ -9,6 +9,6 @@
 <template>
 
     <!-- Add code here -->
-    <img :src="wad" alt="wad" width="200" height="200">
+    <img :src="wad" alt="wad" width="300" height="200">
     <img :src="me" alt="me" width="200" height="200">
 </template>
