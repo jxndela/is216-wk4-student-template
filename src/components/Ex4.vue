@@ -3,6 +3,7 @@
     // Add code in Ex4.vue such that when you
     // click “Change Color”, it changes to red
     // from blue or to blue for red alternately.
+
     //Add code in Ex4.vue such that when you
     // click “Change Text Color”, it changes to
     // red from blue or to blue for red
@@ -20,6 +21,7 @@
     // implement methods below 
     // part 1
     function changeColor() {
+        // if the box is blue, change it to red and vice versa
         if (blueBox.value) {
             blueBox.value = false
             blueBtn.value = false
@@ -48,7 +50,7 @@
     <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
                 because '-' is a minus operator for (Vue) JavaScript  -->
     <div id="part1">
-        <div>
+        <div v-bind:id="id" v-bind:class="blueBox ? 'blueBox' : 'redBox'">
             div ID : {{id}} 
         </div>
         
@@ -56,7 +58,7 @@
     </div>
 
     <div id="part2">
-        <div>
+        <div v-bind:id="id" v-bind:class="activeColor == 'blue' ? 'blueText' : 'redText'">
             div ID : {{id}} 
         </div>
        
