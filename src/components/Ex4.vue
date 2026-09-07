@@ -1,6 +1,12 @@
 <script setup>
     import { ref } from 'vue'
-
+    // Add code in Ex4.vue such that when you
+    // click “Change Color”, it changes to red
+    // from blue or to blue for red alternately.
+    //Add code in Ex4.vue such that when you
+    // click “Change Text Color”, it changes to
+    // red from blue or to blue for red
+    // alternately.
     // Add code here
     // part 1
     const id = ref('demo')

@@ -2,7 +2,12 @@
     import { ref } from 'vue'
 
     // Add code here
-    
+    // In Ex3.vue, a dropdown list is provided to allow users to login with either
+    // username or email. Render the page different depending on the
+    // selection, i.e., show an input for an email or a username accordingly.
+    // Hint: use v-model, v-if, and v-else to accomplish the task
+
+    const loginOption = ref('username')
     
 </script>
 
@@ -10,14 +15,16 @@
     <h1>Please select your login option</h1>
     <!-- Add/modify code in the following to have a dropdown list 
         which lets the user to select either to login with username or email -->
-    <select>
-        <option selected>Username login</option>
-        <option>Email login</option>
+    <select v-model="loginOption">
+        <option value="username" selected>Username login</option>
+        <option value="email">Email login</option>
     </select>
     
     <div>
-        <label>Username</label>
-        <input placeholder="Enter your username">
+        <label v-if="loginOption === 'username'">Username</label>
+        <label v-else-if="loginOption === 'email'">Email</label>
+        <input placeholder="Enter your username" v-if="loginOption === 'username'">
+        <input placeholder="Enter your email" v-else-if="loginOption === 'email'">
     </div>
 </template>
 
