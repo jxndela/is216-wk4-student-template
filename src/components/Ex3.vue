@@ -20,11 +20,13 @@
         <option value="email">Email login</option>
     </select>
     
-    <div>
-        <label v-if="loginOption === 'username'">Username</label>
-        <label v-else-if="loginOption === 'email'">Email</label>
-        <input placeholder="Enter your username" v-if="loginOption === 'username'">
-        <input placeholder="Enter your email" v-else-if="loginOption === 'email'">
+    <div v-if="loginOption === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username">
+    </div>
+    <div v-else-if ="loginOption === 'email'">
+        <label>Email</label>
+        <input placeholder="Enter your email">
     </div>
 </template>
 
