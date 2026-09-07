@@ -24,7 +24,7 @@
         <label>Username</label>
         <input placeholder="Enter your username">
     </div>
-    <div v-else-if ="loginOption === 'email'">
+    <div v-else="loginOption === 'email'">
         <label>Email</label>
         <input placeholder="Enter your email">
     </div>
