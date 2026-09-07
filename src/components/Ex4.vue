@@ -58,7 +58,7 @@
     </div>
 
     <div id="part2">
-        <div v-bind:id="id" v-bind:class="activeColor == 'blue' ? 'blueText' : 'redText'">
+        <div v-bind:style="{ color: activeColor }">
             div ID : {{id}} 
         </div>
        
